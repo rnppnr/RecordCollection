@@ -4,7 +4,7 @@ using System.Collections;
 
 namespace RecordCollection
 {
-    class Artist : IEnumerable, IComparable
+    class Artist : IComparable
     {
         public int Id { get; set; }
         public DateTime DOB { get; set; }
@@ -21,11 +21,6 @@ namespace RecordCollection
             sb.Append(" - ");
             sb.Append(this.DOB.ToShortDateString());
             return sb.ToString();
-        }
-
-        public IEnumerator GetEnumerator()
-        {
-            return (IEnumerator)this;
         }
 
         public int CompareTo(Object obj)

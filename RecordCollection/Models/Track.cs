@@ -3,7 +3,7 @@ using System.Collections;
 
 namespace RecordCollection
 {
-    public class Track : IEnumerable, IComparable
+    public class Track : IComparable
     {
         public int Id { get; set; }
         public int BandId { get; set; }
@@ -11,11 +11,6 @@ namespace RecordCollection
         public int PlayOrder { get; set; }
         public string Title { get; set; }
         public string Length { get; set; }
-
-        public IEnumerator GetEnumerator()
-        {
-            return (IEnumerator)this;
-        }
 
         public int CompareTo(Object obj)
         {

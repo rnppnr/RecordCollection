@@ -4,7 +4,7 @@ using System.Collections;
 
 namespace RecordCollection
 {
-    public class Album : IEnumerable, IComparable
+    public class Album : IComparable
     {
         public int Id { get; set; }
         public int BandId { get; set; }
@@ -12,11 +12,6 @@ namespace RecordCollection
         public string Title { get; set; }
         public string Genre { get; set; }        
         public DateTime ReleaseDate { get; set; }
-
-        public IEnumerator GetEnumerator()
-        {
-            return (IEnumerator)this;
-        }
 
         public int CompareTo(Object obj)
         {
